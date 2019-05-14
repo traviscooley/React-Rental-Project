@@ -1,0 +1,8 @@
+
+To Do List
+
+make a login in
+make a sign up 
+make a log out
+make a search bar for faqs page
+make a filter for the products

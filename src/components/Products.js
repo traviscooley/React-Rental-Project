@@ -1,38 +1,18 @@
-import React, {Component} from "react"
-import Loading from './Loading'
-import Product from "./Product"
+import React from "react"
 
-class Products extends Component {
-    constructor() {
-        super()
-        this.state = {
-            loading: true,
-            products: []
-        }
-    }
-    
-    componentDidMount() {
-        setTimeout(() => {
-            fetch("http://localhost:8000/api/product")
-            .then(response => response.json())
-            .then(products => {
-                this.setState({
-                    loading: false,
-                    products: products
-                })
-            })
-        }, 1750);
-        
-    }
-    
-    render() {
-        const productsLoad = this.state.loading ? <Loading /> : this.state.products.map((item, idx) => <Product {...item} key={idx} />)
-        return (
-            <>
-                {productsLoad}
-            </>
-        )
-    }
+function Product(props) {
+    return(
+        <React.Fragment key={props.id}>
+            <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-flex">
+                <div className="wrapper-product">
+                    <img src={`/img/${props.image}`} className="img-responsive" alt={props.model + "-" + props.color} />
+                    <h2>{props.model}</h2>
+                    <h3>${props.price} | Per Day</h3>
+                    <a href={`/vehicle/${props.id}`} title="Continue" className="btn">Select</a>
+                </div>
+            </div>
+        </React.Fragment>
+    )
 }
 
-export default Products
+export default Product

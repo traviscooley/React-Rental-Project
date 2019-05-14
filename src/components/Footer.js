@@ -13,15 +13,14 @@ function Footer() {
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-sm-5 col-lg-5">
+                            <div className="col-sm-5 col-lg-5 about-us">
                                 <h2>About Us</h2>
                                 <p>Lorem ipsum, doloretur adipisicing elit. Voluptatum odio, incidunt, quia eveniet officia laborum temporibus repudiandae distinctio ut, illum repellat pariatur repellendus natus veritatis reprehenderit facere consequatur veniam totam?</p>
-                                <button>Learn More</button>
+                                <Link to="/about">Learn More</Link>
                             </div>
                             <div className="col-sm-3 col-lg-3">
                                 <h2>Vehicles</h2>
                                 <ul>
-                                    <li><a href="#link">Economy</a></li>
                                     <li><a href="#link">Exotic</a></li>
                                     <li><a href="#link">Luxury</a></li>
                                 </ul>
@@ -49,10 +48,12 @@ function Footer() {
                 <div className="container bottom-bar">
                     <div className="row">
                         <div className="col-sm-12 col-lg-12">
-                            <a href="#link"><i className="fab fa-facebook-square"></i></a>
-                            <a href="#link"><i className="fab fa-twitter-square"></i></a>
-                            <a href="#link"><i className="fab fa-youtube-square"></i></a>
-                            <a href="#link"><i className="fab fa-pinterest-square"></i></a>
+                            <ul>
+                                <li><a href="#link"><i className="fab fa-facebook-square"></i></a></li>
+                                <li><a href="#link"><i className="fab fa-twitter-square"></i></a></li>
+                                <li><a href="#link"><i className="fab fa-youtube-square"></i></a></li>
+                                <li><a href="#link"><i className="fab fa-pinterest-square"></i></a></li>
+                            </ul>
                             <h2>©Copyright</h2>
                         </div>
                     </div>

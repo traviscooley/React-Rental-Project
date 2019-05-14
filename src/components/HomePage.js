@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
 function Home() {
     return (
@@ -8,7 +9,7 @@ function Home() {
                     <div className="col-sm-12 col-lg-12 hero-inner">
                         <h2>Love a Vehicle, Right for Travel</h2>
                         <p>Ad maxime nam vitae consectetur molestias quam id reprehenderit pariatur, assumenda sequi culpa perferendis doloremque accusantium illo suscipit totam nulla consequatur atque!</p>
-                        <button>Learn More</button>
+                        <Link to="/about">Learn More</Link>
                     </div>
                 </div>
             </div>  
@@ -68,7 +69,7 @@ function Home() {
                             </div>
                             <div className="col-sm-6 col-lg-3">
                                 <div className="wrapper-feature-button hidden-xs hidden-sm">
-                                    <button>Learn More</button>
+                                    <Link to="/about">Learn More</Link>
                                 </div>
                                 <div className="approved-feature">
                                     <i className="fas fa-hourglass-half"></i>
@@ -76,12 +77,12 @@ function Home() {
                                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque autem, sit inventore, praesentium vero nobis architecto maxime consectetur aperiam deleniti numquam minima pariatur laudantium suscipit animi doloribus necessitatibus molestiae excepturi.</p>
                                 </div>
                                 <div className="wrapper-feature-button hidden-md hidden-lg">
-                                    <button>Learn More</button>
+                                    <Link to="/about">Learn More</Link>
                                 </div>
                             </div>
                             <div className="col-sm-6 col-lg-3">
                                 <div className="wrapper-feature-button hidden-xs hidden-sm">
-                                    <button>Learn More</button>
+                                    <Link to="/about">Learn More</Link>
                                 </div>
                                 <div className="approved-feature">
                                     <i className="fas fa-cogs"></i>
@@ -89,12 +90,12 @@ function Home() {
                                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque autem, sit inventore, praesentium vero nobis architecto maxime consectetur aperiam deleniti numquam minima pariatur laudantium suscipit animi doloribus necessitatibus molestiae excepturi.</p>
                                 </div>
                                 <div className="wrapper-feature-button hidden-md hidden-lg">
-                                    <button>Learn More</button>
+                                    <Link to="/about">Learn More</Link>
                                 </div>
                             </div>
                             <div className="col-sm-6 col-lg-3">
                                 <div className="wrapper-feature-button hidden-xs hidden-sm">
-                                    <button>Learn More</button>
+                                    <Link to="/about">Learn More</Link>
                                 </div>
                                 <div className="approved-feature">
                                     <i className="fas fa-handshake"></i>
@@ -102,12 +103,12 @@ function Home() {
                                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque autem, sit inventore, praesentium vero nobis architecto maxime consectetur aperiam deleniti numquam minima pariatur laudantium suscipit animi doloribus necessitatibus molestiae excepturi.</p>
                                 </div>
                                 <div className="wrapper-feature-button hidden-md hidden-lg">
-                                    <button>Learn More</button>
+                                    <Link to="/about">Learn More</Link>
                                 </div>
                             </div>
                             <div className="col-sm-6 col-lg-3">
                                 <div className="wrapper-feature-button hidden-xs hidden-sm">
-                                    <button>Learn More</button>
+                                    <Link to="/about">Learn More</Link>
                                 </div>
                                 <div className="approved-feature">
                                     <i className="fas fa-car"></i>
@@ -115,7 +116,7 @@ function Home() {
                                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque autem, sit inventore, praesentium vero nobis architecto maxime consectetur aperiam deleniti numquam minima pariatur laudantium suscipit animi doloribus necessitatibus molestiae excepturi.</p>
                                 </div>
                                 <div className="wrapper-feature-button hidden-md hidden-lg">
-                                    <button>Learn More</button>
+                                    <Link to="/about">Learn More</Link>
                                 </div>
                             </div>
                         </div>

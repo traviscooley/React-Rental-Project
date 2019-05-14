@@ -1,5 +1,5 @@
-import React from 'react'
-import Products from './Products'
+import React from "react"
+import Products from "./ProductsPage"
 
 function Cars() {
     return (

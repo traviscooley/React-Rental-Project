@@ -1,57 +1,40 @@
-import React, { Component } from 'react'
-import Single from './Single'
-import Loading from './Loading'
+import React from "react"
 
-class ProductSingle extends Component {
-    constructor() {
-        super()
-        this.state = {
-            loading: true,
-            product: {
-                id: '',
-                model: '',
-                year: '',
-                color: '',
-                doors: '',
-                seats: '',
-                cargo: '',
-                power: '',
-                miles: '',
-                description: '',
-                price: '',
-                image: ''
-            }
-        }
-    }
-    
-    componentDidMount() {
-        setTimeout(() => {
-            fetch("http://localhost:8000/api/product")
-            .then(response => response.json())
-            .then(products => {
-                let vid = Number(this.props.match.params.id)
-                let product = products.find(item => {
-                    return item.id === vid ? item : null
-                })
-
-                this.setState({
-                    loading: false,
-                    product: product
-                })
-            })
-        }, 1750);
-        
-    }
-    
-    render() {
-        const product = this.state.loading ? <Loading /> :  <Single {...this.state.product} />
-
-        return (
-            <>
-               {product}
-            </>
-        )
-    }
+function Single(props) {
+    return (
+        <React.Fragment key={props.id}>
+            <main>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12 single">
+                            <div className="row wrapper-product">
+                                <div className="col-lg-8">
+                                    <img src={`/img/${props.image}`} className="img-responsive" alt={props.model + "-" + props.color} />
+                                </div>
+                                <div className="col-lg-4">
+                                    <h3>{props.year + " " + props.model}</h3>
+                                    <ul>
+                                        <li>Doors: {props.doors}</li>
+                                        <li>Seats: {props.seats}</li>
+                                        <li>Bags: {props.cargo}</li>
+                                        <li>Horse Power: {props.power}</li>
+                                        <li>MPH: {props.miles}</li>
+                                        
+                                    </ul>
+                                    <h4><strong>${props.price}</strong> per day</h4>
+                                    <a href={`/check-out/${props.id}`} title="Continue" className="btn">Reserve</a>
+                                </div>
+                                <div className="col-lg-12">
+                                    <h5>Description:</h5>
+                                    <p>{props.description}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </React.Fragment>
+    )
 }
 
-export default ProductSingle
+export default Single
